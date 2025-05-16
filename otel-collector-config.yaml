@@ -11,7 +11,7 @@ exporters:
   debug/detailed:
     verbosity: detailed
   elasticsearch:
-    endpoints: ["http://elasticsearch.railway.internal:9200"]
+    endpoints: ["https://elasticsearch-production-215d.up.railway.app"]
     logs_index: logs-otel
     tls:
       insecure: true
