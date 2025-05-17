@@ -1,15 +1,13 @@
 receivers:
   otlp:
     protocols:
-      grpc: 
-        endpoint: 0.0.0.0:4317
-      http: 
-        endpoint: 0.0.0.0:4318
+      grpc:
+      http:
 
 extensions:
 exporters:
   otlphttp:
-    traces_endpoint: "jaeger.railway.internal:4318/v1/traces"
+    traces_endpoint: "jaeger.railway.internal:4317"
   debug/detailed:
     verbosity: detailed
   elasticsearch:
