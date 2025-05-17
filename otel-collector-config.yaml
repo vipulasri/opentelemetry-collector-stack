@@ -2,9 +2,7 @@ receivers:
   otlp:
     protocols:
       grpc: 
-        endpoint: otel-collector.railway.internal:4317
       http: 
-        endpoint: otel-collector.railway.internal:4318
 
 extensions:
 exporters:
