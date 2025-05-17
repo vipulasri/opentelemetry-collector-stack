@@ -2,16 +2,18 @@ receivers:
   otlp:
     protocols:
       grpc:
+         endpoint: 0.0.0.0:4317
       http:
+        endpoint: 0.0.0.0:4318
 
 extensions:
 exporters:
   otlphttp:
-    traces_endpoint: "jaeger.railway.internal:4317"
+    traces_endpoint: "http://jaeger.railway.internal:4318/v1/traces"
   debug/detailed:
     verbosity: detailed
   elasticsearch:
-    endpoints: ["https://elasticsearch-production-215d.up.railway.app"]
+    endpoints: ["http://elasticsearch.railway.internal:9200"]
     logs_index: logs-otel
     tls:
       insecure: true
