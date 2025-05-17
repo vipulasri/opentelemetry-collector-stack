@@ -9,7 +9,7 @@ receivers:
 extensions:
 exporters:
   otlphttp:
-    traces_endpoint: "jaeger.railway.internal:4318"
+    traces_endpoint: "jaeger.railway.internal:4317"
   debug/detailed:
     verbosity: detailed
   elasticsearch:
