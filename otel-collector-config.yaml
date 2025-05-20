@@ -9,6 +9,7 @@ receivers:
 extensions:
 exporters:
   otlphttp:
+    endpoint: "http://loki.railway.internal:3100/otlp"
     traces_endpoint: "http://jaeger.railway.internal:4318/v1/traces"
   debug/detailed:
     verbosity: detailed
@@ -34,4 +35,4 @@ service:
     logs:
       receivers: [otlp]
       processors: [batch]
-      exporters: [debug/detailed, elasticsearch]
+      exporters: [debug/detailed, otlphttp, elasticsearch]
